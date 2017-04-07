@@ -1,0 +1,23 @@
+{
+  "name": "ml-mt7697-config",
+  "version": "4.2.0",
+  "description": "The mt7697 config package for Microlattice.js",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": {
+    "name": "iamblue"
+  },
+  "license": "Apache2",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "browserify": "^13.0.0",
+    "colors": "^1.1.2",
+    "fs-extra": "^0.26.5",
+    "jsmin": "^1.0.1",
+    "read-installed": "^4.0.3",
+    "rimraf": "^2.5.2",
+    "strip-comments": "^0.4.4"
+  }
+}
