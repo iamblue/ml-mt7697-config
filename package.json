@@ -1,6 +1,6 @@
 {
   "name": "ml-mt7697-config",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "The mt7697 config package for Microlattice.js",
   "main": "index.js",
   "scripts": {
