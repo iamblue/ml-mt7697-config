@@ -75,8 +75,8 @@ FOOTER = '''
 '''
 
 dirname, filename = os.path.split(os.path.abspath(__file__))
-print "running from", dirname
-print "file is", filename
+# print "running from", dirname
+# print "file is", filename
 Dirname = dirname.replace('/node_modules/ml-mt7697-config', '')
 OUT_PATH = Dirname + '/tmp/'
 SRC_PATH = Dirname + '/'

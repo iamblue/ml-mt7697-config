@@ -15,7 +15,11 @@ module.exports = function(arg, generate, done) {
   package.SDKpath = "./sdk";
   package.SDKversion = "4.2.0";
   package.scripts.build = "sh ./build.sh";
-  package.scripts.installEnv = "cd sdk && unzip ./LinkIt_SDK_V4.2.0_public_ml.zip && cp -R ./LinkIt_SDK_V4.2.0_public_ml/ ./ && cd .. && ml install:gcc && ml install:ml && rm -r ./sdk/LinkIt_SDK_V4.2.0_public_ml";
+  if (process.platform === 'win32') {
+    package.scripts.installEnv = "ml install:ml";
+  } else {
+    package.scripts.installEnv = "cd sdk && unzip ./LinkIt_SDK_V4.2.0_public_ml.zip && cp -R ./LinkIt_SDK_V4.2.0_public_ml/ ./ && cd .. && ml install:gcc && ml install:ml && rm -r ./sdk/LinkIt_SDK_V4.2.0_public_ml";
+  }
   fs.writeFileAsync(process.env.PWD + '/package.json', JSON.stringify(package, null, '\t'));
   return child.exec('cp ' + path.join(__dirname, '../featureConfig.json') + ' ' + process.env.PWD + '/featureConfig.json && mkdir sdk');
 }
