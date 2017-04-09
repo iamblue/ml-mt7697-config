@@ -97,8 +97,9 @@ module.exports = function(arg, generate, done) {
   .then(function(data) {
 
     var content = '';
+
     for (package in data.dependencies) {
-      if (data.dependencies[package].src && /^ml\-/.test(package) && package !== 'ml-cli') {
+      if (data.dependencies[package].src && /^ml\-/.test(package) && package !== 'ml-cli' && mlModules.indexOf(package) !== -1) {
         for (var index in data.dependencies[package].src) {
           if (/\.c$/.test(data.dependencies[package].src[index])) {
             // parse .c file
@@ -114,7 +115,7 @@ module.exports = function(arg, generate, done) {
         }
       }
     }
-    return content
+    return content;
   })
   .then(function(content) {
 
