@@ -1,5 +1,6 @@
 ![](https://github.com/iamblue/ml-mt7697-config/blob/master/microlattice_7697.png?raw=true) 
 
+[中文](https://iamblue.gitbooks.io/microlattice-js-for-linkit-rtos/content/zh-TW/intro/create/mt7697.html)
 ## Install Microlattice Env 
 
 * Please prepare Node.js ( >= 6 ) env
